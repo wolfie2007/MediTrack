@@ -1,0 +1,45 @@
+# Maven & Build
+target/
+pom.xml.tag
+pom.xml.releaseBackup
+pom.xml.versionsBackup
+pom.xml.backup
+release.properties
+dependency-reduced-pom.xml
+.flattened-pom.xml
+
+# Portable Java Runtime (can be re-downloaded)
+java/
+jdk-*/
+
+# IDEs
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+*.iml
+*.iws
+*.ipr
+
+# Java
+*.class
+*.log
+*.log.*
+hs_err_pid*
+
+# Application Data (user-specific)
+.meditrack/
+
+# Build output directories
+dist/
+bin/
+build/
+.gradle/
+
+# IDE/Editor
+.vscode/settings.json
+.vscode/launch.json
+
+# OS
+Thumbs.db
