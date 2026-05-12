@@ -2,17 +2,17 @@
 
 A comprehensive JavaFX-based desktop application for managing personal health information, medicines, prescriptions, and health records.
 
-## ðŸŽ¯ Features
+## Features
 
-- **ðŸ‘¤ Patient Profiles**: Manage family member health records
-- **ðŸ’Š Medicine Management**: Track medicines and their details
-- **ðŸ“‹ Prescription Tracking**: Organize and monitor prescriptions
-- **ðŸ“… Dose Logging**: Record daily medicine doses with timestamps
-- **ðŸ“Š Health Reports**: View analytics and health insights
-- **ðŸ“ Appointment Management**: Schedule and track medical appointments
-- **ðŸ’¾ Data Persistence**: Automatic local data storage with serialization
+- **Patient Profiles** - Manage family member health records
+- **Medicine Management** - Track medicines and their details  
+- **Prescription Tracking** - Organize and monitor prescriptions
+- **Dose Logging** - Record daily medicine doses with timestamps
+- **Health Reports** - View analytics and health insights
+- **Appointment Management** - Schedule and track medical appointments
+- **Data Persistence** - Automatic local data storage with serialization
 
-## ðŸ›  Technologies
+## Technologies
 
 - **Language**: Java 17
 - **UI Framework**: JavaFX 21.0.3
@@ -20,28 +20,31 @@ A comprehensive JavaFX-based desktop application for managing personal health in
 - **Data Storage**: File-based (serialized Java objects)
 - **Target Platform**: Windows 11 (cross-platform compatible)
 
-## ðŸ“¦ Quick Start
+## Quick Start
 
-### Option 1: Pre-built Portable Package (Easiest)
+### Option 1: Pre-built Portable Package (Recommended)
 
 **No installation required! Just extract and run:**
 
 1. Download `MediTrack-Windows-Portable.zip` (50 MB)
-2. Extract the ZIP file
+2. Extract the ZIP file to any folder
 3. Double-click `run.bat`
-4. MediTrack launches immediately âœ“
+4. MediTrack launches immediately
 
-**Requirements**: None! Java is bundled.
+**What's Included:**
+- Complete JavaFX application
+- Java 17 runtime (bundled)
+- Everything you need - no additional software required
 
 ### Option 2: Build from Source
 
-**Requirements**:
+**Requirements:**
 - Java 17 or later
 - Maven 3.6+
 
 ```bash
 # Clone the repository
-git clone https://github.com/yourusername/MediTrack.git
+git clone https://github.com/wolfie2007/MediTrack.git
 cd MediTrack
 
 # Build the project
@@ -51,46 +54,48 @@ mvn clean package
 java -jar target/MediTrack.jar
 ```
 
-## ðŸ“š Documentation
+## Documentation
 
-- **[QUICK-START.md](QUICK-START.md)** - Fast setup guide
-- **[SETUP-PORTABLE-GUIDE.md](SETUP-PORTABLE-GUIDE.md)** - Detailed portable installation
-- **[DISTRIBUTION-GUIDE.md](DISTRIBUTION-GUIDE.md)** - Distribution and deployment
+- [QUICK-START.md](QUICK-START.md) - Fast setup guide
+- [SETUP-PORTABLE-GUIDE.md](SETUP-PORTABLE-GUIDE.md) - Detailed installation guide
+- [DISTRIBUTION-GUIDE.md](DISTRIBUTION-GUIDE.md) - Deployment information
 
-## ðŸ“ Project Structure
+## Project Structure
 
 ```
 MediTrack/
 â”œâ”€â”€ src/main/java/com/meditrack/
-â”‚   â”œâ”€â”€ App.java                    # Main application entry point
+â”‚   â”œâ”€â”€ App.java                    # Application entry point
 â”‚   â”œâ”€â”€ Main.java                   # Launcher
-â”‚   â”œâ”€â”€ model/                      # Data models (Patient, Medicine, etc.)
+â”‚   â”œâ”€â”€ model/                      # Data models (Patient, Medicine, Prescription, etc.)
 â”‚   â”œâ”€â”€ storage/                    # Data persistence layer
 â”‚   â”œâ”€â”€ ui/                         # UI controllers (JavaFX)
 â”‚   â””â”€â”€ util/                       # Utility classes
+â”‚
 â”œâ”€â”€ src/main/resources/
-â”‚   â”œâ”€â”€ fxml/                       # JavaFX layouts
-â”‚   â”œâ”€â”€ css/                        # Stylesheets
+â”‚   â”œâ”€â”€ fxml/                       # JavaFX UI layouts
+â”‚   â”œâ”€â”€ css/                        # Application stylesheets
 â”‚   â””â”€â”€ fonts/                      # Custom fonts
+â”‚
 â”œâ”€â”€ pom.xml                         # Maven build configuration
 â”œâ”€â”€ run.bat                         # Windows launcher
-â”œâ”€â”€ build-standalone.bat            # Create portable package with Java
+â”œâ”€â”€ build-standalone.bat            # Build portable package with Java
 â””â”€â”€ README.md                       # This file
 ```
 
-## ðŸš€ Distribution
+## Distribution Options
 
-### Create Portable Package
-
-The project includes pre-built portable installers:
+### Pre-built Packages Available
 
 1. **MediTrack-Portable-Package.zip** (8.7 MB)
+   - Lightweight option
    - Requires Java 17+ on target system
-   - Lightweight, fast distribution
+   - Good for distribution in environments with Java already installed
 
 2. **MediTrack-Windows-Portable.zip** (50 MB)
-   - Includes bundled Java runtime
-   - Works on ANY Windows 11 PC without any setup
+   - Complete package with bundled Java 17
+   - Works on ANY Windows 11 PC
+   - No Java installation needed
    - Recommended for end users
 
 ### Building Custom Packages
@@ -99,13 +104,11 @@ The project includes pre-built portable installers:
 # Create package with bundled Java (recommended)
 .\build-standalone.bat
 
-# Create lightweight package (requires Java on target)
-.\build-portable.bat
-
-# Both commands generate ZIP files in the root directory
+# This will create MediTrack-Windows-Portable.zip
+# Ready for distribution to end users
 ```
 
-## ðŸ“Š System Requirements
+## System Requirements
 
 | Requirement | Minimum | Recommended |
 |---|---|---|
@@ -114,94 +117,116 @@ The project includes pre-built portable installers:
 | Disk Space | 300 MB | 500 MB |
 | Java (if not bundled) | 17 LTS | Latest LTS |
 
-## ðŸ“ Usage
+## Usage
 
 ### First Launch
-On first run, the application creates:
-- `~\.meditrack\` folder (Windows) - stores all user data
-- Patients database
-- Medicines inventory
-- Prescription records
-- Dose logs
 
-### Data Backup
-To backup your health data:
+On first run, MediTrack creates:
+- User data folder: `C:\Users\YourUsername\.meditrack\`
+- Database files for patients, medicines, and prescriptions
+- Automatic data backup location
+
+### Data Management
+
+**Backup Your Data:**
 ```
-Copy: C:\Users\YourUsername\.meditrack\
+Copy folder: C:\Users\YourUsername\.meditrack\
 To: External drive or cloud storage
 ```
 
-To restore:
+**Restore Data:**
 ```
-Copy backup files back to: C:\Users\YourUsername\.meditrack\
-Restart the application
+1. Copy backed up .meditrack folder
+2. Paste to: C:\Users\YourUsername\
+3. Restart MediTrack
 ```
 
-## ðŸ”§ Development
+**Uninstall:**
+- Simply delete the extracted MediTrack folder
+- Your data in `.meditrack/` remains (delete if you want full removal)
+
+## Development
 
 ### Build from Source
-```bash
-mvn clean package -DskipTests
-```
 
-### Run with Maven
 ```bash
+# Clean build
+mvn clean package
+
+# Run with Maven
 mvn javafx:run
+
+# Create JAR for distribution
+# JAR is located at: target/MediTrack.jar
 ```
 
-### Create Executable JAR
-```bash
-# JAR is automatically created in target/MediTrack.jar
-java -jar target/MediTrack.jar
-```
+### Project Modules
 
-## ðŸ› Troubleshooting
+- **model/** - Data classes for Patient, Medicine, Prescription, Appointment, DoseLog
+- **storage/** - File persistence and data repository
+- **ui/** - JavaFX controllers for all application screens
+- **util/** - Helper classes for ID generation, events, and alerts
+
+## Troubleshooting
 
 ### Application won't start
-- Ensure Java 17+ is installed: `java -version`
-- Check `.meditrack` folder has write permissions
+- Ensure Java 17+ is installed (if using light package)
+- Check that `.meditrack` folder has write permissions
 - Try running with Administrator privileges
 
-### Data loss
-- Check backup in `~\.meditrack\` folder
-- Restore from backup if available
+### "Java not found" error
+- For portable package: Java should be bundled
+- For light package: Install Java from https://adoptium.net/
 
-### UI issues on different displays
-- Adjust window size via application menus
-- Check system display scaling settings
+### Data not saving
+- Verify `.meditrack` folder exists and is writable
+- Check disk space availability
+- Ensure no file permission issues
 
-## ðŸ“„ License
+### UI display issues
+- Adjust window size using application menus
+- Check Windows display scaling settings
+- Try running on different display resolution
 
-[Add your license here - MIT, Apache 2.0, etc.]
+## Version Info
 
-## ðŸ‘¨â€ðŸ’» Contributing
+- **Version**: 1.0.0
+- **Release Date**: May 2026
+- **Status**: Production Ready
+- **Java Target**: Java 17+
+- **Platform**: Windows (Java 17+ cross-platform compatible)
+
+## License
+
+This project is licensed under the MIT License. See the LICENSE file for details.
+
+## Contributing
 
 Contributions are welcome! Please:
 1. Fork the repository
 2. Create a feature branch (`git checkout -b feature/AmazingFeature`)
-3. Commit changes (`git commit -m 'Add AmazingFeature'`)
-4. Push to branch (`git push origin feature/AmazingFeature`)
+3. Commit your changes (`git commit -m 'Add AmazingFeature'`)
+4. Push to the branch (`git push origin feature/AmazingFeature`)
 5. Open a Pull Request
 
-## ðŸ“ž Support
+## Support
 
 For issues, questions, or suggestions:
-- Open an [Issue](https://github.com/yourusername/MediTrack/issues)
-- Check [Documentation](./SETUP-PORTABLE-GUIDE.md)
+- Open an [Issue](https://github.com/wolfie2007/MediTrack/issues)
+- Check the [Documentation](./SETUP-PORTABLE-GUIDE.md)
+- Review the [Quick Start Guide](./QUICK-START.md)
 
-## ðŸŽ‰ Changelog
+## Project Highlights
 
-### v1.0.0 (Initial Release)
-- Patient profile management
-- Medicine and prescription tracking
-- Dose logging system
-- Health reports
-- Appointment management
-- Portable Windows installer with bundled Java
+- **100% Portable** - Extract and run on any Windows 11 PC
+- **No Installation** - Bundled Java eliminates setup complexity
+- **Zero Dependencies** - Everything included in one folder
+- **User-Friendly** - Intuitive JavaFX interface
+- **Data Privacy** - All data stored locally on your computer
+- **Cross-Platform Ready** - Java codebase works on macOS and Linux too
 
 ---
 
-**Version**: 1.0.0  
-**Last Updated**: May 2026  
-**Platform**: Windows (Java 17+)  
-**Status**: Production Ready âœ“
+**Start using MediTrack today!** Download the portable package and manage your health with ease.
+
+Visit: https://github.com/wolfie2007/MediTrack
