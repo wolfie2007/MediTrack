@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml" fx:controller="com.meditrack.ui.MainController">
+    <left>
+        <VBox spacing="10" prefWidth="240" styleClass="sidebar" BorderPane.alignment="CENTER">
+            <padding>
+                <Insets top="24" right="16" bottom="24" left="16" />
+            </padding>
+            <Label text="MediTrack" styleClass="brand" />
+            <Label text="Personal Health" styleClass="brand-sub" />
+            <ScrollPane fitToWidth="true" styleClass="nav-scroll" VBox.vgrow="ALWAYS" prefHeight="300" vbarPolicy="ALWAYS">
+                <VBox spacing="8" styleClass="nav">
+                    <Button fx:id="dashboardButton" text="Dashboard" styleClass="nav-button" onMousePressed="#showDashboard" pickOnBounds="true" focusTraversable="true" />
+                    <Button fx:id="patientsButton" text="Patient Profiles" styleClass="nav-button" onMousePressed="#showPatients" pickOnBounds="true" focusTraversable="true" />
+                    <Button fx:id="medicinesButton" text="Medicine Management" styleClass="nav-button" onMousePressed="#showMedicines" pickOnBounds="true" focusTraversable="true" />
+                    <Button fx:id="prescriptionsButton" text="Prescription Manager" styleClass="nav-button" onMousePressed="#showPrescriptions" pickOnBounds="true" focusTraversable="true" />
+                    <Button fx:id="doseTrackerButton" text="Daily Dose Tracker" styleClass="nav-button" onMousePressed="#showDoseTracker" pickOnBounds="true" focusTraversable="true" />
+                    <Button fx:id="reportsButton" text="Health Reports" styleClass="nav-button" onMousePressed="#showReports" pickOnBounds="true" focusTraversable="true" />
+                </VBox>
+            </ScrollPane>
+        </VBox>
+    </left>
+
+    <center>
+        <StackPane fx:id="contentHost" styleClass="content" BorderPane.alignment="CENTER" />
+    </center>
+</BorderPane>
