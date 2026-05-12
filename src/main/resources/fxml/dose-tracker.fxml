@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<!-- Tooltip removed -->
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml" fx:controller="com.meditrack.ui.DoseTrackerController" spacing="20">
+    <HBox spacing="12" styleClass="page-header">
+        <VBox spacing="4">
+            <Label text="Daily Dose Tracker" styleClass="page-title" />
+            <Label text="Check off doses and log misses" styleClass="body" />
+        </VBox>
+        <Region HBox.hgrow="ALWAYS" />
+        <Button text="New Dose" styleClass="ghost-button" onAction="#clearForm" />
+    </HBox>
+
+    <HBox spacing="18">
+        <VBox spacing="10" styleClass="panel" HBox.hgrow="ALWAYS">
+            <HBox spacing="8">
+                <Label text="Dose Logs" styleClass="section-title" />
+                <Label fx:id="countLabel" text="0 saved" styleClass="muted" />
+            </HBox>
+            <TableView fx:id="doseTable" prefHeight="420" styleClass="schedule-table">
+                <columns>
+                    <TableColumn fx:id="timeColumn" text="Time" prefWidth="120" />
+                    <TableColumn fx:id="patientColumn" text="Patient" prefWidth="160" />
+                    <TableColumn fx:id="medicineColumn" text="Medicine" prefWidth="160" />
+                    <TableColumn fx:id="statusColumn" text="Status" prefWidth="110" />
+                    <TableColumn fx:id="notesColumn" text="Notes" prefWidth="200" />
+                </columns>
+            </TableView>
+        </VBox>
+
+        <VBox spacing="12" styleClass="panel" prefWidth="320">
+            <Label text="Dose Details" styleClass="section-title" />
+            <VBox spacing="6">
+                <Label text="Prescription" styleClass="input-label" />
+                <ChoiceBox fx:id="prescriptionChoice" />
+            </VBox>
+            <HBox spacing="10">
+                <VBox spacing="6" HBox.hgrow="ALWAYS">
+                    <Label text="Date" styleClass="input-label" />
+                    <DatePicker fx:id="datePicker" />
+                </VBox>
+                <VBox spacing="6" HBox.hgrow="ALWAYS">
+                    <Label text="Time" styleClass="input-label" />
+                    <TextField fx:id="timeField" promptText="HH:mm" />
+                </VBox>
+            </HBox>
+            <VBox spacing="6">
+                <Label text="Status" styleClass="input-label" />
+                <ChoiceBox fx:id="statusChoice" />
+            </VBox>
+            <VBox spacing="6">
+                <Label text="Notes" styleClass="input-label" />
+                <TextArea fx:id="notesArea" prefRowCount="3" />
+            </VBox>
+            <HBox spacing="10">
+                <Button text="Save" styleClass="primary-button" onAction="#saveDose" />
+                <Button text="Delete" styleClass="ghost-button" onAction="#deleteDose" />
+            </HBox>
+            <HBox spacing="10">
+                <Button text="Mark Taken" styleClass="ghost-button" onAction="#markTaken" />
+                <Button text="Mark Missed" styleClass="ghost-button" onAction="#markMissed" />
+            </HBox>
+        </VBox>
+    </HBox>
+</VBox>
