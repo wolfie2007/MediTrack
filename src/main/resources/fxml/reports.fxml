@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<!-- Tooltip removed -->
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml" fx:controller="com.meditrack.ui.ReportsController" spacing="20">
+    <HBox spacing="12" styleClass="page-header">
+        <VBox spacing="4">
+            <Label text="Health Reports" styleClass="page-title" />
+            <Label text="Monthly adherence summary" styleClass="body" />
+        </VBox>
+        <Region HBox.hgrow="ALWAYS" />
+        <Button text="Export to TXT" styleClass="primary-button" onAction="#exportReport" />
+    </HBox>
+
+    <VBox spacing="10" styleClass="panel">
+        <HBox spacing="8">
+            <Label text="Report" styleClass="section-title" />
+            <Label fx:id="statusLabel" text="" styleClass="muted" />
+        </HBox>
+        <TextArea fx:id="reportArea" prefRowCount="18" />
+    </VBox>
+</VBox>
