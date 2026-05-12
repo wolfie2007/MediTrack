@@ -61,7 +61,7 @@ java -jar target/MediTrack.jar
 - [DISTRIBUTION-GUIDE.md](DISTRIBUTION-GUIDE.md) - Deployment information
 
 ## Project Structure
-
+```
 MediTrack/
 ├── src/main/java/com/meditrack/
 │   ├── App.java                    # Application entry point
@@ -80,7 +80,7 @@ MediTrack/
 ├── run.bat                         # Windows launcher
 ├── build-standalone.bat            # Build portable package with Java
 └── README.md                       # This file
-
+```
 ## Distribution Options
 
 ### Pre-built Packages Available
