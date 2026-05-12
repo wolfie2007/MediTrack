@@ -62,26 +62,24 @@ java -jar target/MediTrack.jar
 
 ## Project Structure
 
-```
 MediTrack/
-â”œâ”€â”€ src/main/java/com/meditrack/
-â”‚   â”œâ”€â”€ App.java                    # Application entry point
-â”‚   â”œâ”€â”€ Main.java                   # Launcher
-â”‚   â”œâ”€â”€ model/                      # Data models (Patient, Medicine, Prescription, etc.)
-â”‚   â”œâ”€â”€ storage/                    # Data persistence layer
-â”‚   â”œâ”€â”€ ui/                         # UI controllers (JavaFX)
-â”‚   â””â”€â”€ util/                       # Utility classes
-â”‚
-â”œâ”€â”€ src/main/resources/
-â”‚   â”œâ”€â”€ fxml/                       # JavaFX UI layouts
-â”‚   â”œâ”€â”€ css/                        # Application stylesheets
-â”‚   â””â”€â”€ fonts/                      # Custom fonts
-â”‚
-â”œâ”€â”€ pom.xml                         # Maven build configuration
-â”œâ”€â”€ run.bat                         # Windows launcher
-â”œâ”€â”€ build-standalone.bat            # Build portable package with Java
-â””â”€â”€ README.md                       # This file
-```
+├── src/main/java/com/meditrack/
+│   ├── App.java                    # Application entry point
+│   ├── Main.java                   # Launcher
+│   ├── model/                      # Data models (Patient, Medicine, Prescription, etc.)
+│   ├── storage/                    # Data persistence layer
+│   ├── ui/                         # UI controllers (JavaFX)
+│   └── util/                       # Utility classes
+│
+├── src/main/resources/
+│   ├── fxml/                       # JavaFX UI layouts
+│   ├── css/                        # Application stylesheets
+│   └── fonts/                      # Custom fonts
+│
+├── pom.xml                         # Maven build configuration
+├── run.bat                         # Windows launcher
+├── build-standalone.bat            # Build portable package with Java
+└── README.md                       # This file
 
 ## Distribution Options
 
