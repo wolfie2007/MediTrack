@@ -87,7 +87,7 @@
                 <copy file="${basedir}/run.sh" todir="${project.build.directory}/meditrack-portable" failonerror="false" />
                 <copy file="${basedir}/README-PORTABLE.md" todir="${project.build.directory}/meditrack-portable" failonerror="false" />
                 <zip destfile="${project.build.directory}/MediTrack-Portable.zip" basedir="${project.build.directory}/meditrack-portable" />
-                <echo message="âœ“ Portable package created: MediTrack-Portable.zip" />
+                <echo message="✓ Portable package created: MediTrack-Portable.zip" />
               </target>
             </configuration>
           </execution>
